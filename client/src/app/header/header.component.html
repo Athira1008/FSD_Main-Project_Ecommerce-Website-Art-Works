@@ -1,0 +1,70 @@
+
+<!-- <div>
+     <a routerLink="/">Home</a>
+     <a routerLink="/signup">Signup</a>
+     <a routerLink="/login">Login</a>
+     <a routerLink="/artist-profile">Profile</a>
+     <a routerLink="/customer-profile">Customer Profile</a>
+     <a routerLink="/artist-dashboard">Artist Dashboard</a>
+     <a routerLink="/admin-dashboard">Admin Dashboard</a>
+     <a routerLink="/logout">Logout</a>      
+</div> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <a class="navbar-brand" href="#">ART</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+   
+     <div class="collapse navbar-collapse" id="navbarsExample05">
+       <ul class="navbar-nav mr-auto">
+         <li class="nav-item active">
+           <a class="nav-link" routerLink='/' routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" routerLink='/all-products' routerLinkActive="active">All Art Works</a>
+         </li>
+         <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" routerLink='/' routerLinkActive="active" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a>
+           <div class="dropdown-menu" aria-labelledby="dropdown05">
+             <a class="dropdown-item" routerLink='/' >Beautiful Scapes</a>
+             <a class="dropdown-item" routerLink='/' >Indian Paintings</a>
+             <a class="dropdown-item" routerLink='/' >Religious Paintings</a>
+             <a class="dropdown-item" routerLink='/' >Kids Drawings</a>
+             <a class="dropdown-item" routerLink='/' >Minimalist Drawings</a>
+             <a class="dropdown-item" routerLink='/' >Handmade Paintings</a>
+             <a class="dropdown-item" routerLink='/' >Digital Paintings</a>
+             <a class="dropdown-item" routerLink='/' >Contemporary Paintings</a>
+             <a class="dropdown-item" routerLink='/' >Abstract Paintings</a>
+           </div>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link" routerLink='/' routerLinkActive="active">Artist</a>
+        </li>
+       </ul>
+       <form class="form-inline my-2 my-md-0">
+         <input class="form-control" type="text" placeholder="Search">
+       </form>
+       <ul class="navbar-nav ml-auto ">
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/admin/login' routerLinkActive="active">Admin</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" routerLink='#' routerLinkActive="active" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Signin</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown05">
+            <a class="dropdown-item" routerLink='/login' >Customer</a>
+            <a class="dropdown-item" routerLink='/artist/login' >Artist</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" routerLink='#' routerLinkActive="active" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Signup</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown05">
+            <a class="dropdown-item" routerLink='/signup' >Customer</a>
+            <a class="dropdown-item" routerLink='/artist/signup' >Artist</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/' routerLinkActive="active">Cart</a>
+        </li>
+       </ul>
+     </div>
+   </nav>

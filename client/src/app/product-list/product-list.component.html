@@ -1,0 +1,46 @@
+<div class='update'><router-outlet></router-outlet></div>
+
+<div class="product-list">
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Art Name</th>
+                            <th>Artist Name</th>
+                            <th>Art Code</th>
+                            <th>Upload Date</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let product of products'>
+                            <td><img [src]= 'product.imageUrl'
+                                [title]= 'product.productName'
+                                [style.width.px]= 'imageWidth'
+                                [style.margin.px]= 'imageMargin'></td>
+                            <td>{{product.productName}}</td>
+                            <td>{{product.artistName}}</td>
+                            <td>{{product.productCode}}</td>
+                            <td>{{product.releaseDate}}</td>
+                            <td>{{product.description}}</td>
+                            <td>{{product.price}}</td>
+                            <td>{{product.status}}</td>
+                            <td><a routerLink="edit/{{product._id}}" class="btn btn-primary">Edit</a></td>
+                            <td><input type="button" value="Delete" (click)='deleteProduct(product._id)' class="btn btn-danger"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>  
+    </div>
+</div>
+
+

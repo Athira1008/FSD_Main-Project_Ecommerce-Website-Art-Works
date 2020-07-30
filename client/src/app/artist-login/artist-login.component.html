@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class="py-5">
+    <form class="form-signin" (ngSubmit)="loginUser()">
+<div class=" card text-center text-dark  mb-3 rounded-0">
+    <div class="card-header">
+        <h3 class="mb-0">SignIn</h3>
+    </div>
+    <div class="card-body">
+<!-- <div class="pr-2 pb-3"> 
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+        <label class="custom-control-label" for="customRadioInline1">Customer</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+        <label class="custom-control-label" for="customRadioInline2">Artist</label>
+      </div>
+    </div> -->
+        <div class="form-group">
+            <!-- <label for="exampleInputEmail1">Email address</label> -->
+            <input type="email"  [(ngModel)]="loginArtistDetails.email" name="email" class="form-control" id="email_id" placeholder="Email Id">
+            
+        </div>
+          <div class="form-group">
+            <!-- <label for="exampleInputPassword1">Password</label> -->
+            <input type="password" [(ngModel)]="loginArtistDetails.password" name="password" class="form-control" id="pass_id" placeholder="Enter Your Password">
+          </div>
+          <button type="submit" class="btn btn-dark mb-3">Login</button>
+        </div>
+        </div>
+      </form>
+
+</div>

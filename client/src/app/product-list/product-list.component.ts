@@ -1,0 +1,47 @@
+import { Component, OnInit } from '@angular/core';
+import{ Router } from '@angular/router';
+import { ProductModel } from './product.model';
+import { ProductService } from '../product.service';
+
+@Component({
+  selector: 'app-product-list',
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css']
+})
+export class ProductListComponent implements OnInit {
+  title:String = "Product List";
+  products: ProductModel[];
+  imageWidth: number= 50;
+  imageMargin: number= 2;
+  // showImage: boolean = false;
+
+  constructor(private productService: ProductService,private router:Router) { }
+
+  // toggleImage():void{
+  //   this.showImage= !this.showImage;
+  // }
+
+  ngOnInit(): void {
+    this.productService.getProducts().subscribe((data)=>{
+      this.products=JSON.parse(JSON.stringify(data));
+    });
+  }
+  deleteProduct(id):void
+{
+   if(confirm('Are you sure to delete this record?')==true){
+     this.productService.deleteProduct(id)
+     .subscribe((data)=>{
+      this.products=JSON.parse(JSON.stringify(data));
+
+      // console.log("called");
+     //    alert("Success");
+     
+     });
+   }
+   else{
+     this.router.navigate(['/admin-dashboard/product-list/products']);
+   }
+  }
+}
+
+
